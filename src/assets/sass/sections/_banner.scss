@@ -1,0 +1,180 @@
+// Banner Section
+.banner-section {
+  padding-top: 130px;
+  position: relative;
+  @include breakpoint(max-xl) {
+    padding-top: 100px;
+    overflow: hidden;
+  }
+  @include breakpoint(max-lg) {
+    padding-top: 70px;
+  }
+  @include breakpoint(max-sm) {
+    padding-top: 65px;
+  }
+}
+.banner-content-box {
+  max-width: 850px;
+  padding: 75px 145px;
+  padding-top: 145px;
+  border: 1px solid hsl(var(--base));
+  border-radius: 6px;
+  @include breakpoint(max-xl) {
+    padding: 50px;
+  }
+  @include breakpoint(max-md) {
+    padding: 40px;
+  }
+  @include breakpoint(max-sm) {
+    padding: 20px;
+  }
+  .banner-title {
+    font-size: 40px;
+    background: -webkit-linear-gradient(0deg, #c24c8d 16.16%, #a5d7e4 71.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+    position: relative;
+    max-width: 540px;
+    z-index: 4;
+    @include breakpoint(max-xl) {
+      margin-bottom: 170px;
+      z-index: 113;
+    }
+    @include breakpoint(max-sm) {
+      font-size: 32px;
+      margin-bottom: 135px;
+    }
+  }
+  #appendSpan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 112;
+    @include breakpoint(xl) {
+      left: -15px;
+      z-index: 2;
+    }
+  }
+  .white-line-bg {
+    background-color: hsl(var(--white));
+    // width: 100%;
+    padding-inline: 15px;
+    border-radius: 6px;
+    display: inline;
+  }
+  .banner-pera {
+    font-size: 20px;
+    max-width: 470px;
+    color: hsl(var(--base));
+    font-family: "Inter";
+    font-weight: 300;
+    margin-top: 25px;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 0;
+    @include breakpoint(max-xl) {
+      margin-top: 30px;
+    }
+  }
+}
+.banner-area {
+  .banner-gradient {
+    width: 725px;
+    height: 150px;
+    background: linear-gradient(180deg, #d6fffd 0%, #ead6ff 100%);
+    filter: blur(45px);
+    position: absolute;
+    top: 70px;
+    left:-50px;
+    transform: rotate(-30deg);
+    opacity: .7;
+    z-index: -1;
+    @include breakpoint(max-xl) {
+      top: auto;
+      bottom: 220px;
+      left: -100px;
+      opacity: 1;
+      filter: blur(40px);
+      height: 200px;
+    }
+  }
+  @include breakpoint(xl) {
+    padding-bottom: 30px;
+  }
+  .banner-pera {
+    font-size: 20px;
+    max-width: 470px;
+    color: hsl(var(--base));
+    font-family: "Inter";
+    font-weight: 300;
+    margin-top: 25px;
+    z-index: 2;
+    position: relative;
+    @include breakpoint(max-xl) {
+      margin-top: 30px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+    @include breakpoint(max-sm) {
+      max-width: 300px;
+    }
+  }
+  .free-trial-btn {
+    position: absolute;
+    left: 58%;
+    bottom: 0;
+    transform: translateY(-15%);
+    @include breakpoint(max-xxl) {
+      left: 63%;
+    }
+    @include breakpoint(max-xl) {
+      left: 0;
+      position: relative;
+      margin-top: 30px;
+      transform: translate(0);
+    }
+  }
+}
+
+.banner-thumb-image-two {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  right: 0;
+  @include breakpoint(max-xl) {
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    z-index: 114;
+    img {
+      max-width: 260px !important;
+      @include breakpoint(max-sm) {
+        max-width: 220px !important;
+      }
+    }
+  }
+}
+
+.banner-thumb-image {
+  position: absolute;
+  left: -70px;
+  top: -80px;
+  z-index: 1;
+  @include breakpoint(max-xl) {
+    top: 35%;
+    transform: translateY(-45%);
+    right: -15px;
+    left: auto;
+    max-width: 85%;
+    z-index: 112;
+    height: 280px;
+    object-fit: cover;
+  }
+}
+// Banner Section

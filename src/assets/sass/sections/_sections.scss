@@ -1,0 +1,414 @@
+body {
+  position: relative;
+}
+.body-main-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42px;
+  height: 100%;
+  z-index: 111;
+  object-fit: contain;
+  display: none;
+  @include breakpoint(xl) {
+    display: block;
+  }
+}
+.header-main-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42px;
+  height: 85px;
+  z-index: 111;
+  object-fit: contain;
+  display: block;
+  @include breakpoint(lg) {
+    height: 210px;
+  }
+  @include breakpoint(xl) {
+    display: none;
+  }
+}
+.banner-main-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42px;
+  height: 100%;
+  z-index: 111;
+  object-fit: contain;
+  display: block;
+  @include breakpoint(xl) {
+    display: none;
+  }
+}
+.banner-main-shape-bg {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 42px;
+  background-color: hsl(var(--white));
+  z-index: 110;
+  @include breakpoint(xl) {
+    display: none;
+  }
+}
+
+// Section Title
+.section-title {
+  margin-bottom: 60px;
+  font-size: 20px;
+  font-family: var(--font-medium);
+  @include breakpoint(max-sm) {
+    margin-bottom: 40px;
+  }
+}
+
+// Box item Css
+.box-section {
+  padding-top: 130px;
+  padding-bottom: 50px;
+  position: relative;
+  .gradient-line-one {
+    background: linear-gradient(180deg, #d6fffd 0%, #ead6ff 100%);
+    width: 100%;
+    height: 102px;
+    filter: blur(45px);
+    position: absolute;
+    top: 140px;
+    opacity: 0.8;
+    z-index: -1;
+    @include breakpoint(max-sm) {
+      height: 280px;
+      opacity: 1;
+      filter: blur(50px);
+      top: 250px;
+    }
+  }
+}
+.box-item-area {
+  max-width: 985px;
+  margin: 0 auto;
+  @include breakpoint(max-xl) {
+    max-width: 600px;
+  }
+}
+.c-row-gap {
+  --bs-gutter-x: 45px;
+  --bs-gutter-y: 25px;
+  @include breakpoint(max-xl) {
+    --bs-gutter-x: 55px;
+    --bs-gutter-y: 45px;
+  }
+  @include breakpoint(max-sm) {
+    --bs-gutter-x: 0px;
+    --bs-gutter-y: 0px;
+  }
+}
+.box-section-one {
+  div[class*="col"] {
+    &:nth-of-type(4n + 1) {
+      .box-item {
+        transform: rotate(-2.5deg);
+        @include breakpoint(max-xl) {
+          transform: rotate(-2.5deg);
+        }
+        @include breakpoint(max-sm) {
+          transform: translate(0) rotate(0);
+          margin-left: auto;
+          position: relative;
+          z-index: 4;
+          background-color: hsl(var(--white));
+        }
+      }
+    }
+    &:nth-of-type(4n + 2) {
+      .box-item {
+        transform: translateY(50px) rotate(8deg);
+        @include breakpoint(max-xl) {
+          transform: rotate(8deg);
+        }
+        @include breakpoint(max-sm) {
+          transform: translateY(0) rotate(0);
+          background-color: hsl(var(--white));
+          position: relative;
+          margin-top: -110px;
+          z-index: 3;
+          height: auto;
+        }
+      }
+    }
+    &:nth-of-type(4n + 3) {
+      .box-item {
+        transform: rotate(-4deg);
+        @include breakpoint(max-xl) {
+          transform: rotate(-4deg);
+        }
+        @include breakpoint(max-sm) {
+          transform: translateY(0) rotate(0);
+          background-color: hsl(var(--white));
+          margin-left: auto;
+          margin-top: -110px;
+          position: relative;
+          height: auto;
+          z-index: 2;
+        }
+      }
+    }
+    &:nth-of-type(4n + 4) {
+      .box-item {
+        transform: translateY(40px) rotate(15deg);
+        @include breakpoint(max-xl) {
+          transform: rotate(15deg);
+        }
+        @include breakpoint(max-sm) {
+          transform: translateY(0) rotate(0);
+          background-color: hsl(var(--white));
+          position: relative;
+          margin-top: -120px;
+          z-index: 1;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+.box-item {
+  padding: 30px 20px 15px;
+  border: 1px solid hsl(var(--base));
+  border-radius: 6px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include breakpoint(max-sm) {
+    max-width: 200px;
+  }
+  &__icon {
+    max-width: 100%;
+    margin: 0 auto 25px;
+    text-align: center;
+  }
+  &__content {
+    &-title {
+      font-family: var(--font-regular);
+      color: hsl(var(--base));
+    }
+    p {
+      color: hsl(var(--base));
+      margin-bottom: 0;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+  }
+}
+// Box item Css
+
+// Streamline Section
+.streamline-wrapper {
+  margin-inline: auto;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  width: 542px;
+  background-color: hsl(var(--base));
+  padding: 40px 83px;
+  border-radius: 6px;
+  position: relative;
+  margin-left: -110px;
+  margin-right: 120px;
+  @include breakpoint(max-xl) {
+    margin: 0;
+    padding: 25px 35px 60px;
+    margin-bottom: 220px;
+  }
+}
+.mobile-phone {
+  position: relative;
+  z-index: 2;
+  margin-top: 100px;
+  img {
+    max-width: 100%;
+  }
+  @include breakpoint(max-xl) {
+    margin-top: 0px;
+  }
+}
+.streamline-content {
+  max-width: 276px;
+  // position: relative;
+  @include breakpoint(max-xl) {
+    text-align: right;
+    margin-left: auto;
+  }
+  &__title {
+    color: hsl(var(--white));
+    // font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  p {
+    color: hsl(var(--white));
+  }
+}
+.streamline-thumb {
+  width: 224px;
+  height: 278px;
+  object-fit: cover;
+  position: relative;
+  position: absolute;
+  right: -65px;
+  top: -50px;
+  @include breakpoint(max-xl) {
+    top: calc(100% - 50px);
+    right: auto;
+    left: -15px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    right: -14px;
+    bottom: -14px;
+    background-color: #e8ecf5;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  img {
+    border-radius: 6px;
+    position: relative;
+    z-index: 2;
+  }
+}
+// Streamline Section
+
+// Stockbox Section Two
+.stockbox-two {
+  padding-bottom: 295px;
+  @include breakpoint(max-lg) {
+    padding-bottom: 125px;
+  }
+  .c-row-gap {
+    --bs-gutter-x: 80px;
+  }
+  .box-item-area {
+    max-width: 1100px;
+  }
+  .section-title {
+    margin-bottom: 115px;
+    @include breakpoint(max-lg) {
+      margin-bottom: 50px;
+    }
+  }
+
+  div[class*="col"] {
+    &:nth-of-type(4n + 1) {
+      .box-item {
+        transform: rotate(-20.5deg);
+        @include breakpoint(max-xl) {
+          transform: rotate(-5deg);
+        }
+        @include breakpoint(max-sm) {
+          transform: rotate(-5deg);
+        }
+      }
+    }
+    &:nth-of-type(4n + 2) {
+      .box-item {
+        transform: translateY(-55px) rotate(-4.5deg);
+        @include breakpoint(max-xl) {
+          transform: rotate(8deg);
+        }
+        @include breakpoint(max-sm) {
+          transform: rotate(8deg);
+          margin-left: auto;
+          margin-top: -45px;
+        }
+      }
+    }
+    &:nth-of-type(4n + 3) {
+      .box-item {
+        transform: translateY(20px) rotate(10deg);
+        @include breakpoint(max-xl) {
+          transform: rotate(-7deg);
+        }
+        @include breakpoint(max-sm) {
+          transform: rotate(-7deg);
+          margin-top: -90px;
+        }
+      }
+    }
+    &:nth-of-type(4n + 4) {
+      .box-item {
+        transform: translateY(-50px) rotate(20deg);
+        @include breakpoint(max-xl) {
+          transform: rotate(15deg);
+        }
+        @include breakpoint(max-sm) {
+          transform: rotate(15deg);
+          margin-left: auto;
+          margin-top: -65px;
+        }
+      }
+    }
+  }
+}
+.box-item {
+  &.style-two {
+    position: relative;
+    z-index: 3;
+    padding: 0;
+    border: 0;
+    @include breakpoint(max-sm) {
+      max-width: 210px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      right: -14px;
+      top: -14px;
+      width: 100%;
+      height: 100%;
+      background-color: #f7fbfe;
+      z-index: -1;
+      border-radius: 6px;
+      @include breakpoint(max-sm) {
+        top: 0;
+        right: 0;
+        background-color: #e8ecf5;
+      }
+    }
+    .box-item__inner {
+      border: 1px solid hsl(var(--base));
+      border-radius: 6px;
+    }
+    .box-item__content {
+      padding: 50px 28px 20px;
+      margin-bottom: 14px;
+      background-color: #fff;
+      border-radius: 6px;
+      @include breakpoint(max-sm) {
+        padding-top: 35px;
+        padding-bottom: 10px;
+        margin-bottom: 8px;
+      }
+    }
+    .box-item__thumb {
+      width: 100%;
+      height: 101px;
+      object-fit: cover;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// Stockbox Section Two

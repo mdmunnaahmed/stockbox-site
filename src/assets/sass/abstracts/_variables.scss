@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Hero New Thin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Hero New Thin"), url("Hero New Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Hero New Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Hero New Regular"), url("Hero New Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Hero New Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Hero New Medium"), url("Hero New Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Hero New SemiBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Hero New SemiBold"), url("Hero New SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Hero New Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Hero New Bold"), url("Hero New Bold.woff") format("woff");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+:root {
+  // Fonts
+  --heading-font: "Hero New SemiBold", sans-srif;
+  --body-font: "Hero New Regular", sans-serf;
+
+  --font-thin: "Hero New Thin", sans-serf;
+  --font-regular: "Hero New Regular", sans-serf;
+  --font-medium: "Hero New Medium", sans-serf;
+  --font-semibold: "Hero New Semibold", sans-serf;
+  --font-bold: "Hero New Bold", sans-serf;
+
+  //Colors
+  --heading: 0 0% 23%;
+  --body: 0 0% 23%;
+  --border: 0 0% 90%;
+
+  // Base Color Shade
+  --base-h: 327;
+  --base-s: 98%;
+  --base-l: 25%;
+  --base: var(--base-h) var(--base-s) var(--base-l);
+
+  --base-100: var(--base-h) var(--base-s) calc(var(--base-l) + 20%);
+  --base-200: var(--base-h) var(--base-s) calc(var(--base-l) + 15%);
+  --base-300: var(--base-h) var(--base-s) calc(var(--base-l) + 10%);
+  --base-400: var(--base-h) var(--base-s) calc(var(--base-l) + 5%);
+  --base-600: var(--base-h) var(--base-s) calc(var(--base-l) - 8%);
+  --base-700: var(--base-h) var(--base-s) calc(var(--base-l) - 10%);
+  --base-800: var(--base-h) var(--base-s) calc(var(--base-l) - 15%);
+  --base-900: var(--base-h) var(--base-s) calc(var(--base-l) - 20%);
+
+  // Accent Color Shade
+  --accent-h: 260;
+  --accent-s: 92%;
+  --accent-l: 10%;
+  --accent: var(--accent-h) var(--accent-s) var(--accent-l);
+
+  // Light Color Shade
+  --light-h: 148;
+  --light-s: 0%;
+  --light-l: 95%;
+  --light: var(--light-h) var(--light-s) var(--light-l);
+
+  // Fixed Colors
+  --primary: 245 82% 67%;
+  --secondary: 210 7% 56%;
+  --success: 147 67% 47%;
+  --danger: 360 78% 62%;
+  --warning: 29 100% 63%;
+  --info: 200 90% 53%;
+  --dark: 206 70% 11%;
+  --white: 0 0% 100%;
+  --black: 0 0% 0%;
+}

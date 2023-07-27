@@ -1,0 +1,95 @@
+.cmn-btn {
+  padding: 10px 35px;
+  font-weight: 600;
+  outline: none !important;
+  box-shadow: none !important;
+  @extend %transition;
+  border-radius: 5px;
+  z-index: 1;
+  &.btn--lg {
+    padding: 13px 45px !important;
+    @include breakpoint(lg) {
+      font-size: 18px;
+    }
+  }
+  &.btn--md {
+    padding: 8px 25px !important;
+    font-size: 15px;
+  }
+  &.btn--sm {
+    padding: 5px 15px !important;
+    font-size: 14px;
+  }
+  &.btn--xs {
+    padding: 0px 10px !important;
+    font-size: 13px;
+  }
+}
+
+.account-btn-group {
+  @include breakpoint(max-sm) {
+    width: 35px;
+  }
+}
+.account-btn {
+  padding: 14px 34px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  line-height: 1.1;
+  font-family: var(--font-semibold);
+  @include breakpoint(max-lg) {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  @include breakpoint(max-sm) {
+    font-family: var(--font-thin);
+  }
+  &:hover {
+    color: #51a4ff;
+  }
+  &.active {
+    border: 1px solid #51a4ff;
+    &:hover {
+      background-color: #51a4ff;
+      color: hsl(var(--white));
+    }
+  }
+  &:hover {
+    background-color: #51a4ff;
+    color: hsl(var(--white));
+  }
+}
+
+.free-trial-btn {
+  background-color: #3a3a3a;
+  padding: 14px 25px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  line-height: 1.1;
+  max-width: 200px;
+  width: 100%;
+  color: hsl(var(--white));
+  display: flex;
+  justify-content: space-between;
+  @include breakpoint(max-sm) {
+    max-width: 180px;
+    padding: 11px 16px;
+    font-family: var(--font-thin);
+  }
+  &.active {
+    border: 1px solid #51a4ff;
+    background-color: transparent;
+    color: #3a3a3a;
+    i {
+      color: #51a4ff;
+      transition: all ease 0.3s;
+    }
+    &:hover {
+      background-color: #51a4ff;
+      color: hsl(var(--white));
+      i {
+        color: white;
+      }
+    }
+  }
+}
