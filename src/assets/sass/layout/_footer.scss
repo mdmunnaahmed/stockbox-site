@@ -48,6 +48,9 @@
     gap: 13px;
   }
   &.style-two {
+    @include breakpoint(xl) {
+      justify-content: flex-end;
+    }
     .cmn--btn,
     .free-trial-btn {
       background-color: #3a3a3a;
@@ -55,7 +58,7 @@
       border-radius: 6px;
       border: 1px solid transparent;
       line-height: 1.1;
-      max-width: 200px;
+      max-width: 180px;
       width: 100%;
       color: hsl(var(--white));
       font-family: var(--font-light);
