@@ -1,6 +1,11 @@
 body {
   position: relative;
 }
+.wow {
+  @include breakpoint(max-lg) {
+    animation: none;
+  }
+}
 .body-main-shape {
   position: absolute;
   top: 0;
@@ -45,7 +50,7 @@ body {
 }
 .banner-main-shape-bg {
   position: absolute;
-  content: '';
+  content: "";
   right: 0;
   top: 0;
   height: 100%;
@@ -64,6 +69,10 @@ body {
   font-family: var(--font-medium);
   @include breakpoint(max-sm) {
     margin-bottom: 40px;
+  }
+  &.style--two {
+    font-size: 40px;
+    margin-bottom: 10px;
   }
 }
 
@@ -410,5 +419,10 @@ body {
     }
   }
 }
-
 // Stockbox Section Two
+
+// Feature & Pricing Section
+.features-pricing-section {
+  padding-top: 115px;
+}
+// Feature & Pricing Section

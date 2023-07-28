@@ -1,0 +1,63 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../partial-html/_header.html')
+
+<div class="body-main-shape" style="background: url(assets/images/images/body-shape.png);"></div>
+
+
+<!-- Banner Section -->
+<section class="banner-section style--two">
+  <div class="banner-main-shape" style="background: url(assets/images/images/body-shape.png);"></div>
+  <div class="banner-main-shape-bg"></div>
+  <div class="container position-relative">
+    <div class="banner-area">
+      <img src="assets/images/images/thumb3.png" alt="image" class="banner-thumb-image wow fadeInLeft" data-wow-delay=".4s" data-wow-duration="1s">
+      <div class="banner-content-box">
+        <div class="title-wrapper position-relative">
+          <h1 class="banner-title wow fadeInUp" data-wow-delay=".3s" id="bannerTitle">Think outside the box.</h1>
+          <div id="appendSpan"></div>
+        </div>
+        <p class="banner-pera d-none d-xl-block wow fadeInUp text--body" data-wow-delay=".4s">View all of our CRM features & increase your productivity today. Sign up to start using Stockbox.</p>
+        <div class="banner-thumb-image-two d-xl-none wow fadeInUp">
+          <img src="assets/images/images/banner1.png" alt="image" class="thumb mw-100">
+        </div>
+      </div>
+      <div class="banner-thumb-image-two  d-xl-block d-none">
+        <img src="assets/images/images/banner1.png" alt="image" class="thumb mw-100 wow fadeIn" data-wow-delay=".5s" data-wow-duration="1.1s">
+      </div>
+      <p class="banner-pera d-xl-none text--base wow fadeInUp text--body">View all of our CRM features & increase your productivity today. Sign up to start using Stockbox. </p>
+      <a href="" class="free-trial-btn wow fadeInUp text-white style--two" data-wow-delay=".5s">See Features <i class="fas fa-caret-down"></i></a>
+
+    </div>
+  </div>
+</section>
+<!-- Banner Section -->
+
+<!-- Feature & Pricing Section -->
+<section class="features-pricing-section">
+  <div class="container">
+    <h2 class="section-title style--two text--base">Features & Pricing</h2>
+    <p class="fs--18px">Make the most of what Stockbox has to offer, take a look at the range of tools available.</p>
+  </div>
+</section>
+<!-- Feature & Pricing Section -->
+
+
+@@include('../partial-html/_footer.html')
+@@include('../partial-html/_template-bottom.html')
+
+<script>
+  $(document).ready(function () {
+    var divHeight = $('#bannerTitle').height();
+    var lineHeight = parseInt($('#bannerTitle').css('line-height'));
+    var numberOfLines = Math.round(divHeight / lineHeight);
+
+    for (i = 0; i < numberOfLines; i++) {
+      $('#appendSpan').append(`<span class="white-line-bg"></span>`)
+      $('.white-line-bg').css('height', lineHeight)
+    }
+  });
+</script>
+</body>
+
+</html>

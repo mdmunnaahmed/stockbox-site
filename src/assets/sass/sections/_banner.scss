@@ -12,6 +12,40 @@
   @include breakpoint(max-sm) {
     padding-top: 65px;
   }
+  &.style--two {
+    padding-top: 200px;
+    @include breakpoint(max-xl) {
+      padding-top: 70px;
+    }
+    @include breakpoint(max-sm) {
+      padding-top: 70px;
+      .banner-title {
+        max-width: 250px;
+        margin-bottom: 60px;
+      }
+      .banner-content-box {
+        margin-bottom: 95px;
+        padding-top: 50px;
+      }
+    }
+    .banner-thumb-image-two {
+      top: 34%;
+      @include breakpoint(max-sm) {
+        transform: translateY(50%);
+      }
+    }
+    .banner-thumb-image {
+      @include breakpoint(max-xl) {
+        height: 242px;
+      }
+      @include breakpoint(max-sm) {
+        transform: translateY(-45%);
+      }
+    }
+    .free-trial-btn {
+      font-family: var(--font-medium);
+    }
+  }
 }
 .banner-content-box {
   max-width: 850px;
@@ -91,9 +125,9 @@
     filter: blur(45px);
     position: absolute;
     top: 70px;
-    left:-50px;
+    left: -50px;
     transform: rotate(-30deg);
-    opacity: .7;
+    opacity: 0.7;
     z-index: -1;
     @include breakpoint(max-xl) {
       top: auto;
@@ -128,7 +162,7 @@
   .free-trial-btn {
     position: absolute;
     left: 58%;
-    bottom: 0;
+    bottom: 3px;
     transform: translateY(-15%);
     @include breakpoint(max-xxl) {
       left: 63%;
