@@ -92,3 +92,29 @@ new WOW({
   mobile: false, // default
   live: true, // default
 }).init();
+
+//Faq
+$(".faq-item__title").on("click", function (e) {
+  var element = $(this).parent(".faq-item");
+  if (element.hasClass("open")) {
+    element.removeClass("open");
+    element.find(".faq-item__content").removeClass("open");
+    element.find(".faq-item__content").slideUp(300, "swing");
+  } else {
+    element.addClass("open");
+    element.children(".faq-item__content").slideDown(300, "swing");
+    element
+      .siblings(".faq-item")
+      .children(".faq-item__content")
+      .slideUp(300, "swing");
+    element.siblings(".faq-item").removeClass("open");
+    element
+      .siblings(".faq-item")
+      .find(".faq-item__content")
+      .slideUp(300, "swing");
+  }
+});
+
+$(window).on("load", function () {
+  $("[data-paroller-factor]").paroller();
+});

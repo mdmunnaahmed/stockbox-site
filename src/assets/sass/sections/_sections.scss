@@ -47,6 +47,15 @@ body {
   @include breakpoint(xl) {
     display: none;
   }
+
+  @include breakpoint(max-lg) {
+    &.about-us {
+      height: 750px;
+    }
+    &.terms-conditions {
+      height: calc(100% - 100px);
+    }
+  }
 }
 .banner-main-shape-bg {
   position: absolute;
@@ -424,5 +433,402 @@ body {
 // Feature & Pricing Section
 .features-pricing-section {
   padding-top: 115px;
+  padding-bottom: 150px;
+  @include breakpoint(max-lg) {
+    padding-bottom: 80px;
+  }
+  @include breakpoint(max-sm) {
+    padding-bottom: 60px;
+  }
+  .feature-section-title {
+    @include breakpoint(max-sm) {
+      max-width: 300px;
+    }
+  }
+  .gradient-line-one {
+    background: linear-gradient(180deg, #d6fffd 0%, #ead6ff 100%);
+    width: 100%;
+    height: 102px;
+    filter: blur(70px);
+    position: absolute;
+    top: 100px;
+    opacity: 0.9;
+    z-index: -1;
+    @include breakpoint(max-sm) {
+      opacity: 0.7;
+      filter: blur(40px);
+      top: 80px;
+    }
+  }
+}
+.feature-box {
+  padding: 35px 60px 30px;
+  border-radius: 30px;
+  padding-right: 100px;
+  position: relative;
+  font-family: "Inter";
+  height: 100%;
+  @include breakpoint(max-lg) {
+    padding: 35px 30px 25px;
+  }
+  @include breakpoint(max-md) {
+    padding: 0;
+    &::before {
+      display: none;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 180px;
+    left: 0;
+    bottom: 0;
+    box-shadow: -25px 15px 20px -15px #e5f3fe;
+    border-radius: 30px;
+  }
 }
 // Feature & Pricing Section
+
+// Terms & Conditions Section
+.trems-wrapper {
+  max-width: 800px;
+  margin-inline: auto;
+  padding-top: 60px;
+  padding-bottom: 90px;
+}
+.terms-title {
+  background: -webkit-linear-gradient(0deg, #c24c8d 16.16%, #a5d7e4 71.67%);
+  @extend %gradient-color;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 65px;
+  @include breakpoint(max-sm) {
+    margin-bottom: 22px;
+    text-align: start;
+  }
+}
+.terms-content {
+  @include breakpoint(max-sm) {
+    max-width: 280px;
+  }
+  p {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+      @include breakpoint(max-sm) {
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+// Terms & Conditions Section
+
+// Knowledgebase Section
+.knowledgebase {
+  padding-top: 60px;
+  padding-bottom: 150px;
+}
+.knowledgebase-title {
+  background: -webkit-linear-gradient(0deg, #c24c8d 30.16%, #a5d7e4 50.67%);
+  @extend %gradient-color;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 50px;
+  @include breakpoint(max-sm) {
+    margin-bottom: 22px;
+    text-align: start;
+  }
+}
+.knowledgebase-wrapper {
+  max-width: 1191px;
+  margin-inline: auto;
+}
+.faq-wrapper {
+  width: 645px;
+  @include breakpoint(max-lg) {
+    width: 95%;
+  }
+  @include breakpoint(max-sm) {
+    width: 88%;
+  }
+}
+.faq-item {
+  background-color: hsl(var(--white));
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid hsl(var(--base));
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &.active {
+    .faq-item__content {
+      display: block;
+    }
+  }
+  &.open {
+    .faq-item__title {
+      .title {
+        &::before {
+          transform: translateY(-4px) rotate(90deg);
+        }
+      }
+    }
+  }
+  &__title {
+    padding: 11px 22px;
+    cursor: pointer;
+    @include breakpoint(max-sm) {
+      padding-inline: 20px;
+    }
+    .title {
+      position: relative;
+      padding-right: 130px;
+      @include breakpoint(max-sm) {
+        padding-right: 40px;
+      }
+      font-family: var(--font-semibold);
+      color: #151515;
+      &::before {
+        @extend %font-ico;
+        content: "\f0da";
+        right: 45px;
+        top: 2px;
+        font-size: 22px;
+        color: hsl(var(--base));
+        @extend %transition;
+        transform: translateY(-4px);
+        @include breakpoint(max-sm) {
+          right: 0;
+        }
+      }
+    }
+  }
+  &__content {
+    padding: 15px 22px 0px;
+    padding-top: 0;
+    display: none;
+    color: hsl(var(--base));
+    @include breakpoint(max-sm) {
+      padding-inline: 20px;
+    }
+  }
+}
+.cmn--btn {
+  &.contact--btn {
+    background-color: #3a3a3a;
+    padding: 14.5px 25px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    line-height: 1.1;
+    max-width: 198px;
+    width: 100%;
+    color: hsl(var(--white));
+    font-family: var(--font-light);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.knowledgebase-content {
+  max-width: 430px;
+  @include breakpoint(max-xl) {
+    margin-top: 50px;
+  }
+  @include breakpoint(max-sm) {
+    margin-top: 35px;
+  }
+  .icon {
+    width: 36px;
+    margin-top: 20px;
+    @include breakpoint(max-sm) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  .content {
+    width: calc(100% - 36px);
+    padding-left: 33px;
+    @include breakpoint(max-sm) {
+      width: 100%;
+      padding-left: 0;
+      max-width: 306px;
+    }
+    p {
+      margin-bottom: 25px;
+    }
+  }
+  .content__title {
+    margin-bottom: 5px;
+    font-size: 22px;
+  }
+}
+// Knowledgebase Section
+
+// About Section
+.about-section {
+  padding-top: 50px;
+  padding-bottom: 90px;
+  overflow: hidden;
+  .about-title {
+    margin-bottom: 50px;
+    background: linear-gradient(90deg, #c24c8d 16.16%, #a5d7e4 71.67%);
+    @extend %gradient-color;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include breakpoint(max-md) {
+      margin-bottom: 20px;
+    }
+  }
+}
+.about-content {
+  p {
+    max-width: 700px;
+    margin-inline: auto;
+    font-size: 18px;
+    color: #151515;
+    @include breakpoint(max-lg) {
+      max-width: 650px;
+    }
+    @include breakpoint(max-md) {
+      max-width: 480px;
+      // margin-right: auto;
+      padding-right: 45px;
+      margin-left: 0;
+    }
+    &:not(:last-child) {
+      margin-bottom: 50px;
+      @include breakpoint(max-md) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .button-grp {
+    gap: 10px 34px;
+    .cmn--btn {
+      padding-top: 17px;
+      padding-bottom: 17px;
+      font-weight: var(--font-semibold);
+    }
+  }
+}
+.watch-card-wrapper {
+  padding-top: 100px;
+  padding-bottom: 110px;
+  @include breakpoint(max-md) {
+    padding-top: 100px;
+    padding-bottom: 90px;
+  }
+  position: relative;
+  max-width: 780px;
+  margin-inline: auto;
+  background-color: transparent;
+  position: relative;
+  z-index: 122;
+}
+.watch-card-shape {
+  position: absolute;
+  @include breakpoint(max-md) {
+    img {
+      width: 100%;
+    }
+  }
+}
+.watch-card-item {
+  width: 322.58px;
+  height: 361.61px;
+  border: 0.6px solid hsl(var(--base));
+  box-shadow: 0px 4px 28px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  transform: rotate(-10.57deg);
+  overflow: hidden;
+  background-color: hsl(var(--white));
+  @include breakpoint(max-md) {
+    width: 237px;
+    height: 266px;
+  }
+  @include breakpoint(max-sm) {
+    transform: translateX(-50px) rotate(-10.57deg);
+  }
+  &.style-two {
+    transform: rotate(15deg);
+    margin-top: -50px;
+
+    @include breakpoint(max-sm) {
+      transform: translate(180px) rotate(15deg);
+      margin-top: -350px;
+    }
+    img {
+      animation-name: scroll2;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: scroll 15s infinite linear;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes scroll2 {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+}
+// About Section
+
+// Package Section
+.package-section {
+  .start-toady-btn {
+    margin-top: 75px !important;
+    @include breakpoint(max-lg) {
+      margin-top: 18px !important;
+    }
+  }
+}
+
+.price-item {
+  position: relative;
+  border: 1px solid hsl(var(--base));
+  border-radius: 7px;
+  @extend %transition;
+  font-family: "Inter";
+  .price-item-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  .content {
+    padding: 18px;
+  }
+  .price {
+    padding: 10px 35px;
+    background-color: #507be9;
+    border-radius: 6px 0 6px 0;
+    color: hsl(var(--white));
+  }
+  .fw-bold {
+    font-family: var(--font-medium) !important;
+    font-weight: 400 !important;
+  }
+  &.active,
+  &:hover {
+    background-color: #f6f9ff;
+    box-shadow: 5px 8px 25px -4px hsla(211, 27%, 63%, 0.35);
+  }
+}
+
+// Package Section
