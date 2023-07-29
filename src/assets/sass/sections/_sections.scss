@@ -229,6 +229,11 @@ body {
 .streamline-wrapper {
   margin-inline: auto;
   margin: 0 auto;
+  &.style--two {
+    .streamline-content {
+
+    }
+  }
 }
 
 .content-wrapper {
@@ -258,7 +263,6 @@ body {
 }
 .streamline-content {
   max-width: 276px;
-  // position: relative;
   @include breakpoint(max-xl) {
     text-align: right;
     margin-left: auto;
