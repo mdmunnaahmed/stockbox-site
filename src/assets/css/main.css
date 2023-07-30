@@ -188,7 +188,6 @@ ul {
 
 .scrollToTop.active {
     transform: translateY(0);
-    animation: bounceInDown 2s;
 }
 
 .fs--12px {
