@@ -705,7 +705,7 @@ input:-webkit-autofill:focus {
 .loader:after,
 .loader:before {
     content: "";
-    border: 1em solid #ff5733;
+    border: 1em solid hsl(var(--base));
     border-radius: 50%;
     width: inherit;
     height: inherit;
