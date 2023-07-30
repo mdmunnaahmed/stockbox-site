@@ -156,7 +156,7 @@
 <!-- Package Section -->
 <div class="package-section">
   <div class="container">
-    <div class="tab" style="margin-bottom: 65px; display: block;">
+    <div class="tab">
       <h3 class="text--base mb-2 text-center wow fadeInUp">Select a package</h3>
       <p class="fs--20px text-center wow fadeInUp" data-wow-delay=".3s" style="margin-bottom: 40px;">You can opt for a free trial at the check out</p>
       <div class="row gy-3 justify-content-center">
@@ -208,7 +208,7 @@
       </div>
       <div class="d-flex flex-column-reverse flex-lg-column">
         <a href="" class="free-trial-btn start-toady-btn wow fadeInRight text-white style--two mx-auto mt-5 mt-lg-0" data-wow-delay=".6s">Start Today!<i class="fas fa-caret-right"></i></a>
-        <p class="mb-0 text-center mt-3 wow fadeInUp" style="color: #507BE9;" data-wow-delay=".6s">Add Ons & Upgrades are available within your Dashboard</p>
+        <p class="mb-0 text-sm-center mt-3 wow fadeInUp" style="color: #507BE9;" data-wow-delay=".6s">Add Ons & Upgrades are available within your Dashboard</p>
       </div>
     </div>
   </div>
@@ -216,11 +216,12 @@
 <!-- Package Section -->
 
 <!-- Streamline Section -->
-<section class="feature-streamline-section">
+<section class="feature-streamline-section position-relative">
+  <div class="gradient-line-one"></div>
   <div class="container">
-    <h5 class="text-center">What’s in the box?</h5>
+    <h5 class="text-center section-title">What’s in the box?</h5>
     <div class="streamline-wrapper style--two d-flex flex-wrap justify-content-center align-items-center">
-      <div class="mobile-phone mt-0">
+      <div class="mobile-phone mt-0" data-paroller-factor="-.10" data-paroller-type="foreground" data-paroller-direction="vertical">
         <img src="assets/images/images/feature1.png" alt="image" class="fadeInLeft wow">
       </div>
       <div class="content-wrapper">
@@ -228,8 +229,46 @@
           <h4 class="streamline-content__title wow fadeInUp">Sell Products & Services</h4>
           <p class="wow fadeInUp" data-wow-delay=".4s">With several types of options and statuses available, take control of the products & services listed on your site.</p>
         </div>
-        <div class="streamline-thumb">
-          <img src="assets/images/images/thumb2.png" alt="images" class="wow fadeInRight" data-wow-delay=".5s">
+        <div class="streamline-thumb" data-paroller-factor=".15" data-paroller-type="foreground" data-paroller-direction="vertical">
+          <img src="assets/images/images/thumb4.png" alt="images" class="wow fadeInRight" data-wow-delay=".5s">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-streamline-section position-relative pt-0">
+  <div class="container">
+    <div class="streamline-wrapper reverse style--two d-flex flex-wrap justify-content-center align-items-center">
+      <div class="mobile-phone mt-0" data-paroller-factor="-.10" data-paroller-type="foreground" data-paroller-direction="vertical">
+        <img src="assets/images/images/feature2.png" alt="image" class="fadeInLeft wow">
+      </div>
+      <div class="content-wrapper">
+        <div class="streamline-content">
+          <h4 class="streamline-content__title wow fadeInUp">Point of Sale & Buy Ins</h4>
+          <p class="wow fadeInUp" data-wow-delay=".4s">Built in POS for quick and fast selling outside of your inventory. Our built-in buy-in system can then convert into a listing for selling.</p>
+        </div>
+        <div class="streamline-thumb" data-paroller-factor=".15" data-paroller-type="foreground" data-paroller-direction="vertical">
+          <img src="assets/images/images/thumb5.png" alt="images" class="wow fadeInRight" data-wow-delay=".5s">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-streamline-section position-relative pt-0">
+  <div class="container">
+    <div class="streamline-wrapper style--two d-flex flex-wrap justify-content-center align-items-center">
+      <div class="mobile-phone mt-0" data-paroller-factor="-.10" data-paroller-type="foreground" data-paroller-direction="vertical">
+        <img src="assets/images/images/feature3.png" alt="image" class="fadeInLeft wow">
+      </div>
+      <div class="content-wrapper">
+        <div class="streamline-content">
+          <h4 class="streamline-content__title wow fadeInUp">Marketing</h4>
+          <p class="wow fadeInUp" data-wow-delay=".4s">SEO Focused, with Google Shopping and Analytics Integration. .</p>
+        </div>
+        <div class="streamline-thumb" data-paroller-factor=".15" data-paroller-type="foreground" data-paroller-direction="vertical">
+          <img src="assets/images/images/thumb6.png" alt="images" class="wow fadeInRight" data-wow-delay=".5s">
         </div>
       </div>
     </div>
@@ -252,7 +291,6 @@
     $('.select-item').removeClass('active')
     $(this).addClass('active')
   })
-
 
   $(document).ready(function () {
     var divHeight = $('#bannerTitle').height();

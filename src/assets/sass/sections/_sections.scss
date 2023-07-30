@@ -6,6 +6,16 @@ body {
     animation: none;
   }
 }
+@media (max-width: 991px) {
+  *[data-paroller-factor] {
+    /*for all elements with background parallax effect*/
+    background-position: center !important;
+
+    /*for all elements with foreground parallax effect*/
+    transform: none !important;
+  }
+}
+
 .body-main-shape {
   position: absolute;
   top: 0;
@@ -229,11 +239,6 @@ body {
 .streamline-wrapper {
   margin-inline: auto;
   margin: 0 auto;
-  &.style--two {
-    .streamline-content {
-
-    }
-  }
 }
 
 .content-wrapper {
@@ -488,14 +493,21 @@ body {
     height: 180px;
     left: 0;
     bottom: 0;
-    box-shadow: -25px 15px 20px -15px #e5f3fe;
+    box-shadow: -30px 15px 20px -15px #e5f3fe;
     border-radius: 30px;
+  }
+}
+div[class*="col"] {
+  &:nth-child(2) {
+    .feature-box::before {
+      box-shadow: -30px 15px 20px -15px #ecebfe;
+    }
   }
 }
 // Feature & Pricing Section
 
 // Terms & Conditions Section
-.trems-wrapper {
+.terms-wrapper {
   max-width: 800px;
   margin-inline: auto;
   padding-top: 60px;
@@ -515,7 +527,7 @@ body {
 }
 .terms-content {
   @include breakpoint(max-sm) {
-    max-width: 280px;
+    padding-right: 45px;
   }
   p {
     &:not(:last-child) {
@@ -708,6 +720,9 @@ body {
     }
   }
   .button-grp {
+    @include breakpoint (lg) {
+      margin-top: 90px;
+    }
     gap: 10px 34px;
     .cmn--btn {
       padding-top: 17px;
@@ -793,14 +808,21 @@ body {
 
 // Package Section
 .package-section {
+  @include breakpoint(max-sm) {
+    .container {
+      padding-inline: 40px;
+    }
+  }
   .start-toady-btn {
     margin-top: 75px !important;
     @include breakpoint(max-lg) {
       margin-top: 18px !important;
     }
+    @include breakpoint(max-sm) {
+      max-width: 100%;
+    }
   }
 }
-
 .price-item {
   position: relative;
   border: 1px solid hsl(var(--base));
@@ -836,3 +858,123 @@ body {
 }
 
 // Package Section
+
+// Streamline Two Section
+.feature-streamline-section {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  @include breakpoint(max-lg) {
+    overflow: hidden;
+  }
+  @include breakpoint(max-md) {
+    padding-top: 80px;
+  }
+  .gradient-line-one {
+    background: linear-gradient(180deg, #d6fffd 0%, #ead6ff 100%);
+    width: 100%;
+    height: 102px;
+    filter: blur(50px);
+    position: absolute;
+    bottom: 0px;
+    opacity: 0.9;
+    z-index: -1;
+    @include breakpoint(max-sm) {
+      opacity: 0.7;
+      filter: blur(40px);
+      top: 80px;
+    }
+  }
+}
+.streamline-wrapper {
+  &.style--two {
+    @include breakpoint(max-lg) {
+      width: 100%;
+      position: relative;
+    }
+    @include breakpoint(max-sm) {
+      margin-left: -15px;
+    }
+    .content-wrapper {
+      margin-left: -80px;
+      padding-left: 70px;
+      @include breakpoint(max-lg) {
+        background-color: hsl(var(--white));
+        padding: 0;
+        width: 100%;
+        margin: 0;
+      }
+      h4 {
+        @include breakpoint(max-sm) {
+          max-width: 275px;
+        }
+      }
+      p {
+        font-family: "Inter";
+        font-weight: 300;
+        @include breakpoint(max-sm) {
+          max-width: 275px;
+        }
+      }
+    }
+    .streamline-thumb {
+      top: auto;
+      left: auto;
+      bottom: -50px;
+      right: -85px;
+      @include breakpoint(max-lg) {
+        position: unset;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+    .streamline-content {
+      text-align: left;
+      margin-left: 0;
+      @include breakpoint(max-lg) {
+        background-color: hsl(var(--base));
+        padding: 45px 35px;
+        max-width: 100%;
+        border-radius: 6px;
+      }
+    }
+    .mobile-phone {
+      @include breakpoint(max-lg) {
+        position: absolute;
+        left: 35%;
+        top: 160px;
+        @include breakpoint(max-sm) {
+          top: 35%;
+          left: 40%;
+        }
+        img {
+          max-width: unset;
+        }
+      }
+    }
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+    .content-wrapper {
+      margin-left: 120px;
+      margin-right: -80px;
+      text-align: right;
+      padding-left: 30px;
+      padding-right: 70px;
+      @include breakpoint(max-lg) {
+        margin: 0;
+        margin-left: -15px;
+        padding: 0;
+      }
+    }
+    .streamline-thumb {
+      right: auto;
+      left: -85px;
+    }
+    .streamline-content {
+      margin-left: auto;
+    }
+  }
+}
+// Streamline Two Section
