@@ -4,6 +4,7 @@
   @extend %transition;
   background-color: hsl(var(--white));
   padding-top: 60px;
+  z-index: 9999;
 	@include breakpoint(max-lg) {
 		padding-top: 50px;
 	}
@@ -78,10 +79,10 @@
     }
   }
   .menu {
-    gap: 0 50px;
+    gap: 0 30px;
   }
   .menu > .menu-item > .menu-link {
-    padding: 15px 15px;
+    padding: 12px 8px;
     &.active {
       color: hsl(var(--base));
     }
@@ -93,11 +94,15 @@
     left: 0%;
     opacity: 0;
     visibility: hidden;
-    min-width: 200px;
+    min-width: 185px;
     @include transition;
     transform: translate(0, 10px);
-    z-index: 11;
+    z-index: 1111;
     background-color: hsl(var(--white));
+    border: 1px solid hsl(var(--dark)/.12);
+    box-shadow: 1px 3px 22px hsl(var(--dark)/.08);
+    padding: 8px 0;
+    border-radius: 6px;
     .menu-item {
       padding: 0;
       &:last-child {
@@ -108,10 +113,15 @@
         display: block;
         @include text-wrap;
         -webkit-line-clamp: 1;
-        font-size: 15px;
+        font-size: 14px;
         &:hover,
         &.active {
           color: hsl(var(--base));
+          background-color: hsl(var(--light));
+        }
+        &:active {
+          color: hsl(var(--white));
+          background-color: hsl(var(--base));
         }
       }
     }
@@ -120,14 +130,22 @@
       opacity: 1;
       transform: translate(0, 0);
     }
+    .menu-link {
+      &::after {
+        right: 10px !important;
+        font-size: 14px !important;
+      }
+    }
 
     .sub-menu {
       visibility: hidden;
       opacity: 0;
-      top: 5px;
-      left: -100%;
+      top: 4px;
+      right: -100%;
+      left: auto;
       transform: translate(0, -20px);
     }
+
     .menu-item {
       &:hover > .sub-menu {
         visibility: visible;
