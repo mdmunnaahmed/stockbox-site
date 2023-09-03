@@ -501,6 +501,7 @@ h6 {
     border: 1px solid transparent;
     line-height: 1.1;
     font-family: var(--font-semibold);
+    background-color: hsl(var(--white));
 }
 
 @media (max-width: 991px) {
@@ -1289,6 +1290,55 @@ input:-webkit-autofill:focus {
     font-family: var(--font-medium);
 }
 
+.banner-section.style--three {
+    padding-top: 200px;
+}
+
+@media (max-width: 1199px) {
+    .banner-section.style--three {
+        padding-top: 70px;
+    }
+
+    .banner-section.style--three .banner-content-box {
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 575px) {
+    .banner-section.style--three {
+        padding-top: 70px;
+    }
+
+    .banner-section.style--three .banner-title {
+        max-width: 250px;
+        margin-bottom: 80px;
+    }
+
+    .banner-section.style--three .banner-content-box {
+        margin-bottom: 130px;
+        padding-top: 30px;
+    }
+}
+
+.banner-section.style--three .banner-thumb-image-two {
+    top: 34%;
+}
+
+@media (max-width: 1199px) {
+    .banner-section.style--three .banner-thumb-image {
+        height: 242px;
+        transform: translateY(0%);
+        top: auto;
+        bottom: 25%;
+    }
+}
+
+@media (max-width: 575px) {
+    .banner-section.style--three .banner-thumb-image {
+        bottom: 30%;
+    }
+}
+
 .banner-content-box {
     max-width: 850px;
     padding: 75px 145px;
@@ -1461,6 +1511,93 @@ input:-webkit-autofill:focus {
     }
 }
 
+.banner-btn-group {
+    position: absolute;
+    bottom: 7px;
+    left: 58%;
+    z-index: 21;
+    min-width: 200px;
+    width: 100%;
+    gap: 12px 30px;
+}
+
+@media (max-width: 1199px) {
+    .banner-btn-group {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        gap: 10px 15px;
+        padding-right: 40px;
+    }
+}
+
+.banner-btn-group .account-btn {
+    min-width: 195px;
+    text-align: center;
+    font-family: var(--font-medium);
+}
+
+@media (max-width: 575px) {
+    .banner-btn-group .account-btn {
+        min-width: 170px;
+        padding: 11px 16px;
+    }
+}
+
+.banner-btn-group .banner-btn {
+    background-color: #3a3a3a;
+    padding: 17px 25px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    line-height: 1.1;
+    max-width: 195px;
+    width: 100%;
+    color: hsl(var(--white));
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-btn-group .banner-btn.style--two {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 575px) {
+    .banner-btn-group .banner-btn.style--two {
+        max-width: 170px;
+        padding: 11px 16px;
+        font-family: var(--font-thin);
+    }
+}
+
+@media (max-width: 575px) {
+    .banner-btn-group .banner-btn {
+        max-width: 170px;
+        padding: 11px 16px;
+        font-family: var(--font-thin);
+    }
+}
+
+.banner-btn-group .banner-btn.active {
+    border: 1px solid #51a4ff;
+    background-color: transparent;
+    color: #3a3a3a;
+}
+
+.banner-btn-group .banner-btn.active i {
+    color: #51a4ff;
+    transition: all ease 0.3s;
+}
+
+.banner-btn-group .banner-btn.active:hover {
+    background-color: #51a4ff;
+    color: hsl(var(--white));
+}
+
+.banner-btn-group .banner-btn.active:hover i {
+    color: white;
+}
+
 .banner-thumb-image-two {
     position: absolute;
     top: 45%;
@@ -1523,6 +1660,25 @@ body {
         background-position: center !important;
     /*for all elements with foreground parallax effect*/
         transform: none !important;
+    }
+}
+
+.gradient-line-one {
+    background: linear-gradient(180deg, #d6fffd 0%, #ead6ff 100%);
+    width: 100%;
+    height: 102px;
+    filter: blur(70px);
+    position: absolute;
+    top: 100px;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+@media (max-width: 575px) {
+    .gradient-line-one {
+        opacity: 0.7;
+        filter: blur(40px);
+        top: 80px;
     }
 }
 
@@ -2734,5 +2890,9 @@ div[class*=col]:nth-child(2) .feature-box::before {
 
 .streamline-wrapper.reverse .streamline-content {
     margin-left: auto;
+}
+
+.product-present-section {
+    padding-top: 140px;
 }
 /*# sourceMappingURL=main.css.map */
