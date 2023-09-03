@@ -916,6 +916,10 @@ input:-webkit-autofill:focus {
 }
 
 @media (max-width: 991px) {
+    .header {
+        padding-inline-start: 15px;
+    }
+
     .menu > .menu-item:nth-last-child(1) {
         border-bottom: none;
     }
@@ -954,7 +958,7 @@ input:-webkit-autofill:focus {
         border-bottom: 1px solid hsl(var(--white)/0.1);
     }
 
-    .menu .menu-item:nth-last-child(1) {
+    .menu .menu-item:nth-last-child(1), .menu .menu-item:nth-last-child(2) {
         border-bottom: none;
     }
 

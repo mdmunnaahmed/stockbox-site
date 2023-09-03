@@ -5,9 +5,9 @@
   background-color: hsl(var(--white));
   padding-top: 60px;
   z-index: 9999;
-	@include breakpoint(max-lg) {
-		padding-top: 50px;
-	}
+  @include breakpoint(max-lg) {
+    padding-top: 50px;
+  }
 }
 .logo {
   img {
@@ -44,7 +44,7 @@
   }
   .menu-item {
     .menu-link {
-			font-family: var(--font-thin);
+      font-family: var(--font-thin);
       @include breakpoint(lg) {
         font-family: var(--font-semibold);
       }
@@ -99,8 +99,8 @@
     transform: translate(0, 10px);
     z-index: 1111;
     background-color: hsl(var(--white));
-    border: 1px solid hsl(var(--dark)/.12);
-    box-shadow: 1px 3px 22px hsl(var(--dark)/.08);
+    border: 1px solid hsl(var(--dark) / 0.12);
+    box-shadow: 1px 3px 22px hsl(var(--dark) / 0.08);
     padding: 8px 0;
     border-radius: 6px;
     .menu-item {
@@ -164,6 +164,9 @@
 
 // Mobile Menu
 @include breakpoint(max-lg) {
+  .header {
+    padding-inline-start: 15px;
+  }
   .menu > .menu-item {
     &:nth-last-child(1) {
       border-bottom: none;
@@ -198,7 +201,8 @@
       padding: 4px 0;
       width: 100%;
       border-bottom: 1px solid hsl(var(--white) / 0.1);
-      &:nth-last-child(1) {
+      &:nth-last-child(1),
+      &:nth-last-child(2) {
         border-bottom: none;
       }
       .menu-link {

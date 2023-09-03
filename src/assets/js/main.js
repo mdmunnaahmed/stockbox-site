@@ -41,10 +41,20 @@ $(".menu .menu-item .menu-link").on("click", function (e) {
 //Menu Dropdown
 $("ul>li>.sub-menu").parent("li").addClass("has-submenu");
 
+let count = $(".menu > li").length;
+function menuGap() {
+  if (count >= 8) {
+    $(".menu").css("gap", "0 10px");
+  }
+}
+menuGap()
+
 // Detect Screen Size
 let screenSize = window.innerWidth;
 window.addEventListener("resize", function (e) {
   screenSize = window.innerWidth;
+
+  menuGap()
 });
 
 // Sticky Menu
