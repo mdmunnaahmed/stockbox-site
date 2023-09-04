@@ -996,7 +996,36 @@ div[class*="col"] {
 
 
 // Product Present Section
+
 .product-present-section {
   padding-top: 140px;
+  &:nth-of-type(2n + 1) {
+    > .container > .row {
+      justify-content: flex-start !important;
+      > {
+        * > .row {
+          flex-direction: row-reverse;
+          .product-present-content {
+            text-align: right;
+          }
+        }
+      }
+    }
+    }
+}
+.product-present-thumb-wrapper {
+  .top-img {
+    position: relative;
+    z-index: 2;
+  }
+  .bottom-img {
+    border-radius: 6px;
+    @include breakpoint(max-sm) {
+      margin-top: -35px;
+      height: 215px;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
 }
 // Product Present Section

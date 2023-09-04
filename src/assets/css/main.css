@@ -2895,4 +2895,34 @@ div[class*=col]:nth-child(2) .feature-box::before {
 .product-present-section {
     padding-top: 140px;
 }
+
+.product-present-section:nth-of-type(2n + 1) > .container > .row {
+    justify-content: flex-start !important;
+}
+
+.product-present-section:nth-of-type(2n + 1) > .container > .row > * > .row {
+    flex-direction: row-reverse;
+}
+
+.product-present-section:nth-of-type(2n + 1) > .container > .row > * > .row .product-present-content {
+    text-align: right;
+}
+
+.product-present-thumb-wrapper .top-img {
+    position: relative;
+    z-index: 2;
+}
+
+.product-present-thumb-wrapper .bottom-img {
+    border-radius: 6px;
+}
+
+@media (max-width: 575px) {
+    .product-present-thumb-wrapper .bottom-img {
+        margin-top: -35px;
+        height: 215px;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
 /*# sourceMappingURL=main.css.map */
