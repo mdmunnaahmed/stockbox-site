@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 
-.menu {
+.blog-item__footer, .menu {
     display: flex;
     flex-wrap: wrap;
 }
@@ -11,6 +11,13 @@ img,
     transition: all 0.3s;
 }
 
+.blog-item__content p, .blog-item__content-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .faq-item__title .title::before, .menu .menu-item.has-submenu > .menu-link::after {
     position: absolute;
     font-weight: 900;
@@ -18,7 +25,7 @@ img,
     font-family: "Font Awesome 5 Free";
 }
 
-.about-section .about-title, .knowledgebase-title, .terms-title {
+.blog-section-title, .about-section .about-title, .knowledgebase-title, .terms-title {
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -671,6 +678,16 @@ input:-webkit-autofill:focus {
 }
 
 /* form css end*/
+.pagination .pagination-item .pagination-link {
+    padding: 7px 18px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+}
+
+.pagination .pagination-item .pagination-link.active, .pagination .pagination-item .pagination-link:hover {
+    border: 1px solid #51a4ff;
+}
+
 .list.list-style-one li {
     padding: 5px 0;
 }
@@ -770,7 +787,7 @@ input:-webkit-autofill:focus {
 
 @media (max-width: 575px) {
     .logo img {
-        max-width: 130px;
+        max-width: 110px;
     }
 }
 
@@ -1023,10 +1040,20 @@ input:-webkit-autofill:focus {
 
 .footer-section {
     background-color: #f4f4f4;
-    padding-top: 12px;
-    box-shadow: 0 -4px 35px hsl(var(--dark)/0.08);
     z-index: 112;
     position: relative;
+}
+
+@media (max-width: 575px) {
+    .footer-section {
+        padding-top: 12px;
+        box-shadow: 0 -4px 35px hsl(var(--dark)/0.06);
+    }
+}
+
+.footer-section.box-shadow {
+    padding-top: 12px;
+    box-shadow: 0 -4px 35px hsl(var(--dark)/0.08);
 }
 
 .footer-section .footer-top,
@@ -2990,5 +3017,105 @@ div[class*=col]:nth-child(2) .feature-box::before {
     .product-present-page .box-item-aside-wrapper {
         margin-bottom: 110px;
     }
+}
+
+.blog-section {
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+
+@media (max-width: 1199px) {
+    .blog-section {
+        padding-bottom: 120px;
+    }
+}
+
+@media (max-width: 767px) {
+    .blog-section {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 575px) {
+    .blog-section {
+        padding-bottom: 50px;
+    }
+}
+
+.blog-section .pagination {
+    margin-top: 55px;
+}
+
+@media (max-width: 575px) {
+    .blog-section .container {
+        padding-inline: 25px;
+    }
+}
+
+.blog-section-title {
+    background: -webkit-linear-gradient(0deg, #c24c8d 16.16%, #a5d7e4 71.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 991px) {
+    .blog-section-title {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .blog-section-title {
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+}
+
+.blog-item {
+    border: 1px solid hsl(var(--base));
+    border-radius: 6px;
+}
+
+.blog-item__thumb {
+    overflow: hidden;
+}
+
+.blog-item__content {
+    padding: 15px 20px;
+}
+
+.blog-item__content-title {
+    -webkit-line-clamp: 3;
+    font-family: "Inter";
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.blog-item__content p {
+    -webkit-line-clamp: 2;
+    font-family: "Inter";
+    font-weight: 500;
+}
+
+.blog-item__footer {
+    align-items: center;
+    justify-content: space-between;
+    padding-inline-start: 20px;
+    margin-top: 13px;
+}
+
+.blog-item__footer span {
+    font-family: var(--font-regular);
+}
+
+.blog-item__footer .cmn-btn {
+    background-color: #507be9;
+    color: hsl(var(--white));
+    padding: 10px 21px;
+}
+
+.blog-item:hover .blog-item__thumb img {
+    transform: scale(1.07);
 }
 /*# sourceMappingURL=main.css.map */

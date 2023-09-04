@@ -1,9 +1,15 @@
 .footer-section {
   background-color: #f4f4f4;
-  padding-top: 12px;
-  box-shadow: 0 -4px 35px hsl(var(--dark) / 0.08);
   z-index: 112;
   position: relative;
+  @include breakpoint(max-sm) {
+    padding-top: 12px;
+    box-shadow: 0 -4px 35px hsl(var(--dark) / 0.06);
+  }
+  &.box-shadow {
+    padding-top: 12px;
+    box-shadow: 0 -4px 35px hsl(var(--dark) / 0.08);
+  }
   .footer-top,
   .footer-bottom {
     background-color: #f7fbfe;
