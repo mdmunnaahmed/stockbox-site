@@ -735,7 +735,7 @@ div[class*="col"] {
     }
   }
   .button-grp {
-    @include breakpoint (lg) {
+    @include breakpoint(lg) {
       margin-top: 90px;
     }
     gap: 10px 34px;
@@ -994,13 +994,15 @@ div[class*="col"] {
 }
 // Streamline Two Section
 
-
 // Product Present Section
 
 .product-present-section {
   padding-top: 140px;
   @include breakpoint(max-lg) {
     padding-top: 120px;
+  }
+  @include breakpoint(max-sm) {
+    padding-inline: 15px;
   }
   &:nth-of-type(2n + 1) {
     > .container > .row {
@@ -1032,7 +1034,7 @@ div[class*="col"] {
         }
       }
     }
-    }
+  }
 }
 .product-present-content {
   .title {
@@ -1056,6 +1058,20 @@ div[class*="col"] {
       height: 215px;
       object-fit: cover;
       z-index: -1;
+    }
+  }
+}
+.knowledgebase.style--two {
+  padding-top: 130px;
+  @include breakpoint(max-lg) {
+    padding-top: 30px;
+    padding-bottom: 100px;
+  }
+}
+.product-present-page {
+  @include breakpoint(max-sm) {
+    .box-item-aside-wrapper {
+      margin-bottom: 110px;
     }
   }
 }

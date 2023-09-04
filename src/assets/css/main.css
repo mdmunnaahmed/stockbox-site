@@ -2902,6 +2902,12 @@ div[class*=col]:nth-child(2) .feature-box::before {
     }
 }
 
+@media (max-width: 575px) {
+    .product-present-section {
+        padding-inline: 15px;
+    }
+}
+
 .product-present-section:nth-of-type(2n + 1) > .container > .row {
     justify-content: flex-start !important;
 }
@@ -2962,6 +2968,23 @@ div[class*=col]:nth-child(2) .feature-box::before {
         height: 215px;
         object-fit: cover;
         z-index: -1;
+    }
+}
+
+.knowledgebase.style--two {
+    padding-top: 130px;
+}
+
+@media (max-width: 991px) {
+    .knowledgebase.style--two {
+        padding-top: 30px;
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width: 575px) {
+    .product-present-page .box-item-aside-wrapper {
+        margin-bottom: 110px;
     }
 }
 /*# sourceMappingURL=main.css.map */
