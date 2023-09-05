@@ -3146,6 +3146,10 @@ div[class*=col]:nth-child(2) .feature-box::before {
     }
 }
 
+.content-holder > .title {
+    margin-bottom: 15px;
+}
+
 .content-holder .account-btn, .content-holder .free-trial-btn {
     min-width: 185px;
     text-align: center;
@@ -3188,5 +3192,18 @@ div[class*=col]:nth-child(2) .feature-box::before {
 
 .blog-details-list .list-item .title {
     margin-bottom: 12px;
+}
+
+.blog-details-list.style--two li {
+    margin-bottom: 10px;
+}
+
+.blog-details-list.style--two .list-item .title {
+    margin-bottom: 5px;
+}
+
+.blog-details-list.style--two .list-item p {
+    padding-left: 15px;
+    font-size: 15px;
 }
 /*# sourceMappingURL=main.css.map */

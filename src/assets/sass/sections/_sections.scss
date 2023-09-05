@@ -1183,6 +1183,9 @@ div[class*="col"] {
     margin-bottom: 30px;
     padding-inline: 25px;
   }
+  > .title {
+    margin-bottom: 15px;
+  }
 
   .account-btn, .free-trial-btn {
     min-width: 185px;
@@ -1215,6 +1218,20 @@ div[class*="col"] {
   .list-item {
     .title {
       margin-bottom: 12px;
+    }
+  }
+  &.style--two {
+    li {
+      margin-bottom: 10px;
+    }
+    .list-item {
+      .title {
+        margin-bottom: 5px;
+      }
+      p {
+        padding-left: 15px;
+        font-size: 15px;
+      }
     }
   }
 }

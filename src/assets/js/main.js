@@ -98,7 +98,7 @@ $(".menu li a").each(function () {
 new WOW({
   boxClass: "wow", // default
   animateClass: "animated", // default
-  offset: 0, // default
+  offset: 50, // default
   mobile: false, // default
   live: true, // default
 }).init();
