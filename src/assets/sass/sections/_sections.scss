@@ -1109,6 +1109,7 @@ div[class*="col"] {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 50px;
+  font-size: 48px;
   @include breakpoint(max-lg) {
     margin-bottom: 40px;
   }
@@ -1161,3 +1162,45 @@ div[class*="col"] {
   }
 }
 // Blog Section
+
+// Blog Details Section
+.blog-details-section {
+  
+}
+.content-holder {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  @include breakpoint(max-lg) {
+    margin-bottom: 40px;
+  }
+  @include breakpoint(max-sm) {
+    margin-bottom: 25px;
+  }
+
+  .account-btn, .free-trial-btn {
+    min-width: 185px;
+    text-align: center;
+  }
+}
+.details-page-image {
+  margin-bottom: 50px;
+  border-radius: 6px;
+  @include breakpoint(max-lg) {
+    margin-bottom: 40px;
+  }
+  @include breakpoint(max-sm) {
+    margin-bottom: 25px;
+  }
+}
+
+.blog-details-list {
+  li {
+    margin-bottom: 50px;
+  }
+  .list-item {
+    .title {
+      margin-bottom: 12px;
+    }
+  }
+}
+// Blog Details Section

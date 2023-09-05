@@ -3057,6 +3057,7 @@ div[class*=col]:nth-child(2) .feature-box::before {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 50px;
+    font-size: 48px;
 }
 
 @media (max-width: 991px) {
@@ -3117,5 +3118,52 @@ div[class*=col]:nth-child(2) .feature-box::before {
 
 .blog-item:hover .blog-item__thumb img {
     transform: scale(1.07);
+}
+
+.content-holder {
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+@media (max-width: 991px) {
+    .content-holder {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .content-holder {
+        margin-bottom: 25px;
+    }
+}
+
+.content-holder .account-btn, .content-holder .free-trial-btn {
+    min-width: 185px;
+    text-align: center;
+}
+
+.details-page-image {
+    margin-bottom: 50px;
+    border-radius: 6px;
+}
+
+@media (max-width: 991px) {
+    .details-page-image {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .details-page-image {
+        margin-bottom: 25px;
+    }
+}
+
+.blog-details-list li {
+    margin-bottom: 50px;
+}
+
+.blog-details-list .list-item .title {
+    margin-bottom: 12px;
 }
 /*# sourceMappingURL=main.css.map */
