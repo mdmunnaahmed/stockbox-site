@@ -1116,6 +1116,8 @@ div[class*="col"] {
   @include breakpoint(max-sm) {
     margin-bottom: 30px;
     font-size: 28px;
+    padding-inline: 25px;
+    text-align: left !important;
   }
 }
 .blog-item {
@@ -1165,7 +1167,11 @@ div[class*="col"] {
 
 // Blog Details Section
 .blog-details-section {
-  
+  .container {
+    @include breakpoint(max-sm) {
+      padding-inline: 0;
+    }
+  }
 }
 .content-holder {
   max-width: 700px;
@@ -1174,12 +1180,15 @@ div[class*="col"] {
     margin-bottom: 40px;
   }
   @include breakpoint(max-sm) {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    padding-inline: 25px;
   }
 
   .account-btn, .free-trial-btn {
     min-width: 185px;
     text-align: center;
+    padding: 12px 25px;
+    font-family: var(--font-medium);
   }
 }
 .details-page-image {
@@ -1196,6 +1205,12 @@ div[class*="col"] {
 .blog-details-list {
   li {
     margin-bottom: 50px;
+    @include breakpoint(max-lg) {
+      margin-bottom: 40px;
+    }
+    @include breakpoint(max-sm) {
+      margin-bottom: 25px;
+    }
   }
   .list-item {
     .title {

@@ -3070,6 +3070,8 @@ div[class*=col]:nth-child(2) .feature-box::before {
     .blog-section-title {
         margin-bottom: 30px;
         font-size: 28px;
+        padding-inline: 25px;
+        text-align: left !important;
     }
 }
 
@@ -3120,6 +3122,12 @@ div[class*=col]:nth-child(2) .feature-box::before {
     transform: scale(1.07);
 }
 
+@media (max-width: 575px) {
+    .blog-details-section .container {
+        padding-inline: 0;
+    }
+}
+
 .content-holder {
     max-width: 700px;
     margin: 0 auto 50px;
@@ -3133,13 +3141,16 @@ div[class*=col]:nth-child(2) .feature-box::before {
 
 @media (max-width: 575px) {
     .content-holder {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
+        padding-inline: 25px;
     }
 }
 
 .content-holder .account-btn, .content-holder .free-trial-btn {
     min-width: 185px;
     text-align: center;
+    padding: 12px 25px;
+    font-family: var(--font-medium);
 }
 
 .details-page-image {
@@ -3161,6 +3172,18 @@ div[class*=col]:nth-child(2) .feature-box::before {
 
 .blog-details-list li {
     margin-bottom: 50px;
+}
+
+@media (max-width: 991px) {
+    .blog-details-list li {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .blog-details-list li {
+        margin-bottom: 25px;
+    }
 }
 
 .blog-details-list .list-item .title {
