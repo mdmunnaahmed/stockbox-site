@@ -845,7 +845,7 @@ input:-webkit-autofill:focus {
     }
 
     .menu {
-        gap: 0 30px;
+        gap: 0 40px;
     }
 
     .menu > .menu-item > .menu-link {
